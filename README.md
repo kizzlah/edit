@@ -1,11 +1,16 @@
 # edit
 
-**edit** is a personal experimental fork of VS Code, evolved from the Void codebase and shaped for AI-assisted software development.
+**edit** is a personal experimental VS Code fork focused on AI-assisted software development.
 
-This repository keeps the full desktop editor source and is used as a sandbox for trying new ideas in:
-- AI-powered coding workflows
-- local/remote model integrations
-- editor UX experiments
+## What changed in this fork
+
+Recent rebrand updates now include:
+- product and app identity updated from Void to **edit**
+- a custom circuit-board-inspired theme at `resources/theme/edit-theme.json`
+- new splash, welcome, and app icon assets in:
+  - `resources/splash/`
+  - `resources/welcome/`
+  - `resources/icon/`
 
 ## Project status
 
@@ -18,12 +23,12 @@ Get builds from this fork's releases:
 
 ## Development references
 
-- [VOID_CODEBASE_GUIDE](./VOID_CODEBASE_GUIDE.md)
-- [HOW_TO_CONTRIBUTE](./HOW_TO_CONTRIBUTE.md)
+- [Codebase Guide](./VOID_CODEBASE_GUIDE.md)
+- [How to Contribute](./HOW_TO_CONTRIBUTE.md)
 
 ## Upstream reference
 
-edit is ultimately based on the [microsoft/vscode](https://github.com/microsoft/vscode) codebase.
+edit is based on the [microsoft/vscode](https://github.com/microsoft/vscode) codebase.
 
 ## Support and issues
 
