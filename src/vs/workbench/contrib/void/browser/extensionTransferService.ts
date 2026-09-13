@@ -10,6 +10,7 @@ import { URI } from '../../../../base/common/uri.js';
 import { IFileService } from '../../../../platform/files/common/files.js';
 import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
 import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { INativeWorkbenchEnvironmentService } from '../../../services/environment/electron-sandbox/environmentService.js';
 import { TransferEditorType, TransferFilesInfo } from './extensionTransferTypes.js';
 
 
@@ -51,12 +52,30 @@ class ExtensionTransferService extends Disposable implements IExtensionTransferS
 
 	constructor(
 		@IFileService private readonly _fileService: IFileService,
+		@INativeWorkbenchEnvironmentService private readonly _environmentService: INativeWorkbenchEnvironmentService,
 	) {
 		super()
 	}
 
 	async transferExtensions(os: 'mac' | 'windows' | 'linux' | null, fromEditor: TransferEditorType) {
-		const transferTheseFiles = transferTheseFilesOfOS(os, fromEditor)
+		const transferTheseFiles = transferTheseFilesOfOS(os, fromEditor).map(item => {
+			if (item.isExtensions) {
+				return {
+					...item,
+					to: URI.file(this._environmentService.extensionsPath),
+				};
+			}
+
+			const destinationFileName = item.to.path.split('/').at(-1);
+			if (destinationFileName === 'settings.json' || destinationFileName === 'keybindings.json') {
+				return {
+					...item,
+					to: URI.joinPath(this._environmentService.appSettingsHome, 'User', destinationFileName),
+				};
+			}
+
+			return item;
+		});
 		const fileService = this._fileService
 
 		let errAcc = ''
@@ -134,9 +153,9 @@ class ExtensionTransferService extends Disposable implements IExtensionTransferS
 	}
 
 	async deleteBlacklistExtensions(os: 'mac' | 'windows' | 'linux' | null) {
+		void os;
 		const fileService = this._fileService
-		const extensionsURI = getExtensionsFolder(os)
-		if (!extensionsURI) return
+		const extensionsURI = URI.file(this._environmentService.extensionsPath)
 		const eURI = await fileService.resolve(extensionsURI)
 		for (const child of eURI.children ?? []) {
 
@@ -320,10 +339,4 @@ const transferTheseFilesOfOS = (os: 'mac' | 'windows' | 'linux' | null, fromEdit
 	}
 
 	throw new Error(`os '${os}' not recognized or editor type '${fromEditor}' not supported for this OS`)
-}
-
-
-const getExtensionsFolder = (os: 'mac' | 'windows' | 'linux' | null) => {
-	const t = transferTheseFilesOfOS(os, 'VS Code') // from editor doesnt matter
-	return t.find(f => f.isExtensions)?.to
 }

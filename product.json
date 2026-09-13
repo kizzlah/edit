@@ -1,7 +1,7 @@
 {
 	"nameShort": "edit",
 	"nameLong": "edit",
-	"voidVersion": "1.4.9",
+	"editVersion": "1.4.9",
 	"voidRelease": "0044",
 	"applicationName": "edit",
 	"dataFolderName": ".edit",
