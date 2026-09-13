@@ -134,17 +134,17 @@ echo "Icon=void" >> VoidApp.AppDir/void.desktop && \
 chmod +x VoidApp.AppDir/void.desktop && \
 cp VoidApp.AppDir/void.desktop VoidApp.AppDir/usr/share/applications/ && \
 echo "[Desktop Entry]" > VoidApp.AppDir/void-url-handler.desktop && \
-echo "Name=edit - URL Handler" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "Comment=Open source AI code editor." >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "GenericName=Text Editor" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "Exec=edit --open-url %U" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "Icon=edit" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "Type=Application" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "NoDisplay=true" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "StartupNotify=true" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "Categories=Utility;TextEditor;Development;IDE;" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "MimeType=x-scheme-handler/edit;" >> VoidApp.AppDir/void-url-handler.desktop && \
-echo "Keywords=edit;" >> VoidApp.AppDir/void-url-handler.desktop && \
+echo "Name=edit - URL Handler" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "Comment=Open source AI code editor." > VoidApp.AppDir/void-url-handler.desktop && \
+echo "GenericName=Text Editor" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "Exec=edit --open-url %U" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "Icon=edit" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "Type=Application" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "NoDisplay=true" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "StartupNotify=true" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "Categories=Utility;TextEditor;Development;IDE;" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "MimeType=x-scheme-handler/edit;" > VoidApp.AppDir/void-url-handler.desktop && \
+echo "Keywords=edit;" > VoidApp.AppDir/void-url-handler.desktop && \
 chmod +x VoidApp.AppDir/void-url-handler.desktop && \
 cp VoidApp.AppDir/void-url-handler.desktop VoidApp.AppDir/usr/share/applications/ && \
 echo "#!/bin/bash" > VoidApp.AppDir/AppRun && \

@@ -63,9 +63,9 @@
       },
       {
         "id": "edit Circuit",
-        "label": "edit Circuit",
+        "label": "%editCircuitColorThemeLabel%",
         "uiTheme": "vs-dark",
-        "path": "./themes/edit-circuit.json"
+        "path": "./themes/edit_circuit.json"
       }
     ],
     "iconThemes": [

@@ -21,7 +21,7 @@ import { IAction } from '../../../../base/common/actions.js';
 
 
 const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifService: INotificationService, updateService: IUpdateService): INotificationHandle => {
-	const message = res?.message || 'This is a very old version of edit, please download the latest version from [kizzlah/edit releases](https://github.com/kizzlah/edit/releases/latest).'
+	const message = res?.message || 'This is a very old version of edit, please download the latest version! [edit releases](https://github.com/kizzlah/edit/releases/latest)!'
 
 	let actions: INotificationActions | undefined
 
@@ -85,12 +85,12 @@ const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifSe
 		primary.push({
 			id: 'void.updater.site',
 			enabled: true,
-			label: `edit repo`,
+			label: `edit Releases`,
 			tooltip: '',
 			class: undefined,
 			run: () => {
 				const { window } = dom.getActiveWindow()
-				window.open('https://github.com/kizzlah/edit')
+				window.open('https://github.com/kizzlah/edit/releases/latest')
 			}
 		})
 
@@ -127,7 +127,7 @@ const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifSe
 	// })
 }
 const notifyErrChecking = (notifService: INotificationService): INotificationHandle => {
-	const message = `edit Error: There was an error checking for updates. If this persists, please reinstall from [kizzlah/edit releases](https://github.com/kizzlah/edit/releases/latest).`
+	const message = `edit Error: There was an error checking for updates. If this persists, please get in touch or reinstall edit [here](https://github.com/kizzlah/edit/releases/latest)!`
 	const notifController = notifService.notify({
 		severity: Severity.Info,
 		message: message,
