@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <circle cx="256" cy="256" r="226" fill="#1A1D24" stroke="#3D4554" stroke-width="10"/>
-  <line x1="94" y1="148" x2="176" y2="148" stroke="#A7C8FF" stroke-width="7" stroke-linecap="round"/>
-  <line x1="338" y1="148" x2="418" y2="148" stroke="#C9B6FF" stroke-width="7" stroke-linecap="round"/>
-  <line x1="96" y1="366" x2="178" y2="366" stroke="#F6B8D2" stroke-width="7" stroke-linecap="round"/>
-  <line x1="334" y1="366" x2="416" y2="366" stroke="#A7C8FF" stroke-width="7" stroke-linecap="round"/>
-  <circle cx="256" cy="278" r="124" fill="none" stroke="#E8EDF4" stroke-width="14"/>
-  <circle cx="256" cy="278" r="60" fill="#1A1D24"/>
-  <rect x="240" y="244" width="126" height="30" rx="12" fill="#C9B6FF"/>
-  <circle cx="160" cy="216" r="12" fill="#A7C8FF"/>
-  <circle cx="360" cy="222" r="12" fill="#F6B8D2"/>
-  <circle cx="170" cy="362" r="12" fill="#C9B6FF"/>
-  <circle cx="338" cy="366" r="12" fill="#A7C8FF"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><circle cx="256" cy="256" r="226" fill="#1A1D24" stroke="#3D4554" stroke-width="10"/><line x1="94" x2="176" y1="148" y2="148" stroke="#A7C8FF" stroke-linecap="round" stroke-width="7"/><line x1="338" x2="418" y1="148" y2="148" stroke="#C9B6FF" stroke-linecap="round" stroke-width="7"/><line x1="96" x2="178" y1="366" y2="366" stroke="#F6B8D2" stroke-linecap="round" stroke-width="7"/><line x1="334" x2="416" y1="366" y2="366" stroke="#A7C8FF" stroke-linecap="round" stroke-width="7"/><circle cx="256" cy="278" r="124" fill="none" stroke="#E8EDF4" stroke-width="14"/><circle cx="256" cy="278" r="60" fill="#1A1D24"/><rect width="126" height="30" x="240" y="244" fill="#C9B6FF" rx="12"/><circle cx="160" cy="216" r="12" fill="#A7C8FF"/><circle cx="360" cy="222" r="12" fill="#F6B8D2"/><circle cx="170" cy="362" r="12" fill="#C9B6FF"/><circle cx="338" cy="366" r="12" fill="#A7C8FF"/></svg>
