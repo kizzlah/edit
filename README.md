@@ -21,11 +21,6 @@ edit is actively maintained as a personal fork and may diverge from upstream pro
 Get builds from this fork's releases:
 - [Releases](https://github.com/kizzlah/edit/releases)
 
-## Development references
-
-- [Codebase Guide](./VOID_CODEBASE_GUIDE.md)
-- [How to Contribute](./HOW_TO_CONTRIBUTE.md)
-
 ## Upstream reference
 
 edit is based on the [microsoft/vscode](https://github.com/microsoft/vscode) codebase.
